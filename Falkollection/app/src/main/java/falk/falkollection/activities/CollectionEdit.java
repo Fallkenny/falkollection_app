@@ -94,7 +94,10 @@ public class CollectionEdit extends AppCompatActivity {
             else
                 imageView.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.icons8_purple_book_48));
 
+            setTitle("Editar Item");
         }
+        else
+            setTitle("Novo Item");
     }
 
     public void resetImage(View view){

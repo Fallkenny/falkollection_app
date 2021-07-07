@@ -1,4 +1,4 @@
-package falk.falkollection.activities.ui.about;
+package falk.falkollection.activities.fragment.about;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

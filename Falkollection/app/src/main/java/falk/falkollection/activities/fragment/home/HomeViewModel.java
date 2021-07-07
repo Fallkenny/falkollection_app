@@ -1,19 +1,19 @@
-package falk.falkollection.activities.ui.about;
+package falk.falkollection.activities.fragment.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class AboutViewModel extends ViewModel {
-
+public class HomeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
-    public AboutViewModel() {
+
+    public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Trabalho desenvolvido para a disciplina de Programacao para dispositivos moveis na Universidade de Caxias do Sul (UCS).");
+        mText.setValue("Navegue no menu lateral");
     }
+
     public LiveData<String> getText() {
         return mText;
     }
-
 }

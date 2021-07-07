@@ -1,16 +1,15 @@
-package falk.falkollection.activities.ui.home;
+package falk.falkollection.activities.fragment.collections;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class CollectionsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("Navegue no menu lateral");
+    public CollectionsViewModel() {
+
     }
 
     public LiveData<String> getText() {

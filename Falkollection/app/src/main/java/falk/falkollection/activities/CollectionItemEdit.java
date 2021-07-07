@@ -124,6 +124,10 @@ public class CollectionItemEdit extends AppCompatActivity {
         CheckBox obtainedCheckBox = findViewById(R.id.checkBox);
 
         ImageButton scanButton = findViewById(R.id.btScan);
+        ImageButton gallerybutton  = findViewById(R.id.selectGallery);
+        ImageButton camerabutton  = findViewById(R.id.selectCamera);
+        ImageButton resetbutton  = findViewById(R.id.resetImage);
+        ImageButton easynameButton  = findViewById(R.id.resetImage4);
         ImageView imageView = findViewById(R.id.imageView_CollectionItemCover);
         FloatingActionButton saveButton = findViewById(R.id.saveButton);
 
@@ -135,10 +139,16 @@ public class CollectionItemEdit extends AppCompatActivity {
         {
             nameField.setEnabled(false);
             volumesField.setEnabled(false);
+            ISBNfield.setEnabled(false);
 
             obtainedCheckBox.setEnabled(false);
             saveButton.setVisibility(View.INVISIBLE);
             scanButton.setVisibility(View.INVISIBLE);
+            gallerybutton.setVisibility(View.INVISIBLE);
+            camerabutton.setVisibility(View.INVISIBLE);
+            resetbutton.setVisibility(View.INVISIBLE);
+            easynameButton.setVisibility(View.INVISIBLE);
+
         }
 
         if(id!=0)
@@ -155,7 +165,10 @@ public class CollectionItemEdit extends AppCompatActivity {
             if(editingCollectionItem.getIsbn() != 0)
                 ISBNfield.setText(String.valueOf(editingCollectionItem.getIsbn()));
 
-            setTitle("Editar Item");
+            if(!isReadOnly)
+                setTitle("Editar Item");
+            else
+                setTitle("Visualização");
         }
         else
             setTitle("Novo Item");

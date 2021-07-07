@@ -1,4 +1,4 @@
-package falk.falkollection.activities.ui.home;
+package falk.falkollection.activities.fragment.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
