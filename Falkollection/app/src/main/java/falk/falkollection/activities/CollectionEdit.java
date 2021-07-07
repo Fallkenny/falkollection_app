@@ -110,10 +110,8 @@ public class CollectionEdit extends AppCompatActivity {
         startActivityForResult(intent, GALLERY);
     }
 
-
-
     public void pictureSelectCamera(View view){
-        Intent cameraIntent = new  Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(cameraIntent, CAMERA_REQUEST);
     }
 

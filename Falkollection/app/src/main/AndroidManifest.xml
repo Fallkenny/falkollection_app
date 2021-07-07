@@ -5,35 +5,39 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:icon="@drawable/falkollection"
         android:label="@string/app_name"
         android:roundIcon="@drawable/falkollection"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Falkollection">
-        <activity android:name=".activities.CameraScannerActivity"
-            android:screenOrientation="portrait"
-            android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"/>
-        <activity android:name=".activities.CollectionItemEdit"
-            android:windowSoftInputMode="adjustResize"
-            />
-        <activity android:name=".activities.CollectionItemsActivity" />
-        <activity android:name=".activities.CollectionEdit"
-            android:windowSoftInputMode="adjustResize"
-            />
-        <activity android:name=".activities.CollectionsActivity" />
-        <activity android:name=".activities.MainActivity">
+        android:theme="@style/Theme.Falkollection"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.NavDrawerMainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Falkollection.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.CameraScannerActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme" />
+        <activity
+            android:name=".activities.CollectionItemEdit"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activities.CollectionItemsActivity" />
+        <activity
+            android:name=".activities.CollectionEdit"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
